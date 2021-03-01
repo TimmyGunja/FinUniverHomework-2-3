@@ -1,0 +1,30 @@
+* {
+    /*-fx-color: #dedede;*/
+    -fx-background: #eeeeee;
+    font-family: "Al Tarikh";
+}
+
+.menu-button {
+    -fx-display: inline-block;
+    -fx-text-align: center;
+    -fx-padding: 5px;
+    -fx-margin: 7px;
+    -fx-color: #ffffff;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 1px;
+    -fx-text-decoration: none;
+    -fx-font-size: 14px;
+    -fx-overflow: hidden;
+    -fx-transition: 2.0s;
+    -fx-background-color: transparent;
+}
+
+.menu-button:hover {
+    -fx-color: rgba(255, 255, 255, 0.9);
+    -fx-background-color: rgb(239, 239, 239);
+    -fx-box-shadow: 0 0 5px rgb(255, 255, 255);
+
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-text-fill: -fx-text-base-color;
+}
