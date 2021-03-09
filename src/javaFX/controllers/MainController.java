@@ -1,10 +1,9 @@
-package sample.controllers;
+package javaFX.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
-import sample.Main;
 
 public class MainController {
     // Контроллер для главного меню приложения

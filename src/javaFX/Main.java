@@ -1,19 +1,17 @@
-package sample;
+package javaFX;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import sample.controllers.PersonEditDialogController;
-import sample.controllers.PersonOverviewController;
-import sample.models.Person;
+import javaFX.controllers.PersonEditDialogController;
+import javaFX.controllers.PersonOverviewController;
+import javaFX.models.Person;
 
 import java.io.IOException;
 import java.util.Random;
@@ -29,8 +27,9 @@ public class Main extends Application {
     }
 
     public Main(){
-        for (int i=0; i < 25;i++){
-            personData.add(new Person("Имя " + i ,"Фамилия " + i*2));
+        for (int i=0; i < 15;i++){
+            Random random = new Random();
+            personData.add(new Person("Имя " + i ,"Фамилия " + random.nextInt(30)));
         }
     }
 
@@ -38,8 +37,8 @@ public class Main extends Application {
         final Random random = new Random();
         ObservableList<Person> locData = FXCollections.observableArrayList();
 
-        for (int i=1; i <= 20;i++){
-            locData.add(new Person("Имя " + i ,"Фамилия " + random.nextInt(100)));
+        for (int i=1; i <= 15;i++){
+            locData.add(new Person("Имя " + i ,"Фамилия " + random.nextInt(30)));
         }
 
         return locData;
@@ -81,12 +80,8 @@ public class Main extends Application {
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             rootLayout.setCenter(personOverview);
-
-//
-//            PersonOverviewController PController = new PersonOverviewController();
-//            PController.setPersonTableView( (TableView<Person>) getPersonData());
-//            PController.initialize();
-
+            PersonOverviewController PController= loader.getController();
+            PController.setMainApp(this);
 
         } catch (IOException e){
             e.printStackTrace();
@@ -113,8 +108,8 @@ public class Main extends Application {
             // Создаём диалоговое окно Stage.
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Edit Person");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
+            dialogStage.initModality(Modality.WINDOW_MODAL);
             Scene scene = new Scene(page);
             dialogStage.setScene(scene);
 
@@ -125,8 +120,8 @@ public class Main extends Application {
 
             // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
             dialogStage.showAndWait();
-
             return controller.isOkClicked();
+
         } catch (IOException e) {
             e.printStackTrace();
             return false;

@@ -1,12 +1,12 @@
-package sample.controllers;
+package javaFX.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.models.Person;
-import sample.utils.DateUtil;
+import javaFX.models.Person;
+import javaFX.utils.DateUtil;
 
 /**
  * Окно для изменения информации об адресате.
@@ -85,8 +85,8 @@ public class PersonEditDialogController {
             person.setFirstName(firstNameField.getText());
             person.setLastName(lastNameField.getText());
             person.setStreet(streetField.getText());
-            person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
             person.setCity(cityField.getText());
+            person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
             person.setBirthday(DateUtil.parse(birthdayField.getText()));
 
             okClicked = true;

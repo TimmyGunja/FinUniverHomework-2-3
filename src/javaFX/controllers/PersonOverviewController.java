@@ -1,17 +1,11 @@
-package sample.controllers;
+package javaFX.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import sample.Main;
-import sample.models.Person;
-import sample.utils.DateUtil;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.Scanner;
+import javaFX.Main;
+import javaFX.models.Person;
+import javaFX.utils.DateUtil;
 
 public class PersonOverviewController{
     @FXML

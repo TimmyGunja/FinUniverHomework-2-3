@@ -1,4 +1,4 @@
-package sample.utils;
+package javaFX.utils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
