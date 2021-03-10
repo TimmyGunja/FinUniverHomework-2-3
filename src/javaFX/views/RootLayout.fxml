@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="rootBorderPane" prefHeight="400.0" prefWidth="600.0" styleClass="rootBorderPane" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFX.controllers.MainController">
+   <top>
+      <MenuBar id="rootMenuBar" styleClass="rootMenuBar" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="rootMenuButton" mnemonicParsing="false" styleClass="rootMenuButton" text="File">
+            <items>
+              <MenuItem id="rootMenuItem" mnemonicParsing="false" styleClass="rootMenuItem" text="Close" />
+            </items>
+          </Menu>
+          <Menu id="rootMenuButton" mnemonicParsing="false" styleClass="rootMenuButton" text="Edit">
+            <items>
+              <MenuItem id="rootMenuItem" mnemonicParsing="false" styleClass="rootMenuItem" text="Delete" />
+            </items>
+          </Menu>
+          <Menu id="rootMenuButton" mnemonicParsing="false" styleClass="rootMenuButton" text="Help">
+            <items>
+              <MenuItem id="rootMenuItem" mnemonicParsing="false" styleClass="rootMenuItem" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
